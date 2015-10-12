@@ -54,23 +54,36 @@
     <div class=heading1>學歷 :國立成功大學電機工程系</div>
     <div class=heading4>經歷 ：2015中友科技探索營 生輔</br>  2015成大電機營 生輔<bra>
     
+    
+    <span id="yudan19"></span>
     <script type="text/javascript"><!--
-var background = "http://cdn-obs.line-apps.com/line/r/lineq/c/9ed0b1bd-7d46-46db-82e8-eca1942aaee8571e20t0291e287";
-var speed = 50;
-browserName = navigator.appName;
-browserVer = parseInt(navigator.appVersion);
-if (browserName != "Netscape" || browserVer >= 4.5) {
-function moveback(movert,movedn,hPos,vPos) {
-if (arguments[4]) document.body.style.backgroundImage = "url(\"" + arguments[4] + "\")";
-if (arguments[5]) document.body.style.backgroundRepeat = arguments[5]
-if (!isNaN(hPos)) {if ((movert!=0) && (hPos>0)) hPos=-100000; hPos += movert}
-if (!isNaN(vPos)) {if ((movedn!=0) && (vPos>0)) vPos=-100000; vPos+= movedn}
-document.body.style.backgroundPosition= hPos + " " + vPos
-if (isNaN(hPos)) hPos = "\"" + hPos + "\""
-if (isNaN(vPos)) vPos = "\"" + vPos + "\""
-setTimeout("moveback("+movert+","+movedn+","+hPos+","+vPos+")",speed)}
-moveback(1,1,0,0, background);}
-// --></script>
+    var milisec=0;
+    var seconds=0;
+    function yudans_net(){
+    if (milisec>=9){milisec=0; seconds+=1;} else {milisec+=1;}
+    document.getElementById("yudan19").innerHTML="你在這停留了 "+seconds+"."+milisec+" 秒";
+    setTimeout("yudans_net()",100);}
+    yudans_net();
+    // --></script>
+    
+    
+    <script type="text/javascript"><!--
+    var background = "http://cdn-obs.line-apps.com/line/r/lineq/c/9ed0b1bd-7d46-46db-82e8-eca1942aaee8571e20t0291e287";
+    var speed = 80;
+    browserName = navigator.appName;
+    browserVer = parseInt(navigator.appVersion);
+    if (browserName != "Netscape" || browserVer >= 4.5) {
+    function moveback(movert,movedn,hPos,vPos) {
+    if (arguments[4]) document.body.style.backgroundImage = "url(\"" + arguments[4] + "\")";
+    if (arguments[5]) document.body.style.backgroundRepeat = arguments[5]
+    if (!isNaN(hPos)) {if ((movert!=0) && (hPos>0)) hPos=-100000; hPos += movert}
+    if (!isNaN(vPos)) {if ((movedn!=0) && (vPos>0)) vPos=-100000; vPos+= movedn}
+    document.body.style.backgroundPosition= hPos + " " + vPos
+    if (isNaN(hPos)) hPos = "\"" + hPos + "\""
+    if (isNaN(vPos)) vPos = "\"" + vPos + "\""
+    setTimeout("moveback("+movert+","+movedn+","+hPos+","+vPos+")",speed)}
+    moveback(1,-1,0,0, background);}
+    // --></script>
     
   </body>
   
