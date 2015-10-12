@@ -1,165 +1,225 @@
-
+<!DOCTYPE html>
 <html>
-  <head>
-    <body onload="alert('歡迎！！')">
+<body>
 
+<style>
+#container {width:490px}
+/* 以下是header區放置logo與banner主圖的css*/
+#header {
+background-color:#FFFF00;
+}
+#logo {
+float:left;/*飄移logo圖至同div區塊的左邊，這樣才不會擠斷後方的元素到下一列*/
+}
+h1 {
+margin-bottom:0;
+font-size:24px;padding:3px;text-align:center;
+}
+#menu {
+clear:both;/*消除之前float浮移區,這樣後方的menu DIV 才能重啟始浮移位置*/
+background-color:#FF00FF;
+height:200px;width:22%;
+float:left;
+font-size:12px;
+}
 
-    
+/* 以下是主要內容區css*/
+#content {
+background-color:#fff;height:200px;width:78%;float:left;
+}
+/*news區*/
+#left2 {float:left;margin:24px 6px;}
+#news {
+	border: 1px solid #632d00;
+	border-bottom: 8px solid #04b2a0;
+	padding: 0px;
+	font-size:10px;
+	width:160px;
+	}
+	
+.news_title h2{
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 1em;
+	margin:0;
+	padding: 7px 0 0 30px;
+	}
 
-    
-    <title>===我的資料===
-    </title>
-    
-    <style>
-    <!-- body {
-    scrollbar-DarkShadow-Color:#FFCCCC;
-    scrollbar-Track-Color:#FFCCCC; 
-    scrollbar-Face-Color:#FFCCCC;
-    scrollbar-Shadow-Color:#FFCCCC; 
-    scrollbar-Highlight-Color:#FFCCCC; 
-    scrollbar-3dLight-Color:#FFCCCC;
-    scrollbar-Arrow-Color:#FFCCCC
-    } -->
-    </style>
-    
-    
-    
-    <style>
-    .heading1 {height:80px;width:200px;float:left;border-left-style:solid; border-right-style:solid; font-family:"微軟正黑體";
-    border-bottom-style:solid;color:#000000;font-size:16px;background-color:#FFCCCC;
-    font-size:0.8cm;text-align:center;}
-    </style>
-    
-    <style>
-    .heading2 {height:80px;width:200px;float:left;border-left-style:solid; border-right-style:solid; font-family:"微軟正黑體";
-    border-bottom-style:solid;color:#000000;font-size:16px;background-color:#FFFFFF;
-    font-size:0.8cm;text-align:center;  }
-    </style>
-    
-    <style>
-    .heading3 {height:80px;width:200px;float:left;border-left-style:solid; border-right-style:solid; border-right-color:#000000;
-    border-left-color:#000000;font-family:"微軟正黑體";border-top-style:solid;border-top-color:#000000;
-    border-bottom-style:solid;border-bottom-color:#000000;color:#444444;
-    font-size:16px;font-weight: 1000;background-color:#FFCCCC;font-size:1.0cm;text-align:center; }
-    </style>
-    
-   <style>
-    .heading4 {height:80px;width:200px;float:left;border-left-style:solid; border-right-style:solid; font-family:"微軟正黑體";
-    border-bottom-style:solid;color:#000000;font-size:16px;background-color:#FFFFFF;
-    font-size:0.8cm;text-align:center;}
-   </style>
-   
-   
-   
-    
-        
-  <script type="text/javascript"><!-- 
-    function yudan_bk() {
-    title = "===我的資料===";
-    url = "http://bearhzuahzua.github.io/bearhzuahzua/";
-    if (window.sidebar) {window.sidebar.addPanel(title, url,"");}
-    else if(window.external ) {window.external.AddFavorite( url, title);}
-    else if(window.opera && window.print) {return true;}}
-    // --></script>
-    
-  </head>
-  
-  
-  
-  <body>
-    <div style="width:50px;height:30px;"></div>
-  
+.news_title {
+	background-image:url(./img/tab01.gif);
+	color: yellow;
+	height: 20px;
+	text-align: left;
+	width:162px;
+	padding: 0px;
+	}
+	
+.more_link {
+	padding:0px; margin-left:80px;
+	font-size:8px;
+	}
+dl {
+	border-bottom: dotted 2px #632d00;
+	clear: both;
+	margin: 0;
+	padding: 3px 0;
+	}
+	
+dt {
+	color: #fe9901;
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 5em;
+	}
+	
+dd {
+	margin: 0;
+	padding: 0;
+	margin-left: 5em;
+	}
+	
+.dl_bottom {
+	border-bottom: 1px solid #FFF;
+	}
+	
+/*以下是商品區*/
+#right2 {float:left;margin:24px 3px;}
+#products {
+	border: 1px solid #632d00;
+	border-bottom: 8px solid #04b2a0;
+	padding: 0;
+	font-size:12px;
+	width:180px;height:100px;
+	}
+	
+.products_title h2{
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 1em;
+	margin:0;
+	padding: 7px 0 0 30px;
+	}
 
+.products_title {
+	background: url(./img/tab02.gif) no-repeat;
+	color: yellow;
+	height: 20px;
+	width:182px;
+	padding: 0;
+	}
+	
 
-    <div class=heading3><span onmouseover="this.innerHTML='熊抓抓'" onmouseout="this.innerHTML='劉懿婷'">劉懿婷</span></div>
-    <div class=heading2><span onmouseover="this.innerHTML='電話 : 0988-313-608'" onmouseout="this.innerHTML='電話 : 09XX-XXX-XXX'">電話 : 09XX-XXX-XXX</span></div>
-    <div class=heading1>信箱 : <a href="pidashing@gmail.com">pidashing@gmail.com</a></div>
-    <div class=heading2>網站 : <a href="https://www.facebook.com/profile.php?id=100000383123002" target="_name"><span onmouseover="this.style.fontSize='32px'" onmouseout="this.style.fontSize='32px'">劉懿婷</span></a></div>
-    <div class=heading1>學歷 :國立成功大學電機工程系</div>
-    <div class=heading4>經歷 ：2015中友科技探索營 生輔</br>  2015成大電機營 生輔<bra></div>
-    
-    <div class=heading1>
-    <span id="yudan19"></span>
-    <script type="text/javascript"><!--
-    var milisec=0;
-    var seconds=0;
-    function yudans_net(){
-    if (milisec>=9){milisec=0; seconds+=1;} else {milisec+=1;}
-    document.getElementById("yudan19").innerHTML="矮額你在這停留了 "+seconds+"."+milisec+" 秒耶～";
-    setTimeout("yudans_net()",100);}
-    yudans_net();
-    // --></script></div>
-    
-    
-    <script type="text/javascript"><!--
-    var background = "http://ppt360.com/background/UploadFiles_6733/201012/2010122016301173.jpg";
-    var speed =70;
-    browserName = navigator.appName;
-    browserVer = parseInt(navigator.appVersion);
-    if (browserName != "Netscape" || browserVer >= 4.5) {
-    function moveback(movert,movedn,hPos,vPos) {
-    if (arguments[4]) document.body.style.backgroundImage = "url(\"" + arguments[4] + "\")";
-    if (arguments[5]) document.body.style.backgroundRepeat = arguments[5]
-    if (!isNaN(hPos)) {if ((movert!=0) && (hPos>0)) hPos=-100000; hPos += movert}
-    if (!isNaN(vPos)) {if ((movedn!=0) && (vPos>0)) vPos=-100000; vPos+= movedn}
-    document.body.style.backgroundPosition= hPos + " " + vPos
-    if (isNaN(hPos)) hPos = "\"" + hPos + "\""
-    if (isNaN(vPos)) vPos = "\"" + vPos + "\""
-    setTimeout("moveback("+movert+","+movedn+","+hPos+","+vPos+")",speed)}
-    moveback(1,0,0,0, background);}
-    // --></script>
-    
-    <div class=heading2>
-    <script type="text/javascript"><!--
-    function getCookieVal(offset) {
-    var endstr = document.cookie.indexOf (";", offset);
-    if (endstr == -1)
-    endstr = document.cookie.length;
-    return unescape(document.cookie.substring(offset, endstr));}
-    function GetCookie (name) {
-    var arg = name + "=";
-    var alen = arg.length;
-    var clen = document.cookie.length;
-    var i = 0;
-    while (i < clen) {
-    var j = i + alen;
-    if (document.cookie.substring(i, j) == arg)
-    return getCookieVal (j);
-    i = document.cookie.indexOf(" ", i) + 1;
-    if (i == 0)
-    break;}
-    return null;}
-    function SetCookie (name, value) {
-    var argv = SetCookie.arguments;
-    var argc = SetCookie.arguments.length;
-    var expires = (argc > 2) ? argv[2] : null;
-    var path = (argc > 3) ? argv[3] : null;
-    var domain = (argc > 4) ? argv[4] : null;
-    var secure = (argc > 5) ? argv[5] : false;
-    document.cookie = name + "=" + escape (value) +
-    ((expires == null) ? "" : ("; expires=" + expires.toGMTString())) +
-    ((path == null) ? "" : ("; path=" + path)) +
-    ((domain == null) ? "" : ("; domain=" + domain)) +
-    ((secure == true) ? "; secure" : "");}
-    function DeleteCookie(name) {
-    var exp = new Date();
-    FixCookieDate (exp); // Correct for Mac bug
-    exp.setTime (exp.getTime() - 1); // This cookie is history
-    var cval = GetCookie (name);
-    if (cval != null)
-    document.cookie = name + "=" + cval + "; expires=" + exp.toGMTString();}
-    var expdate = new Date();
-    var num_visits;
-    expdate.setTime(expdate.getTime() + (5*24*60*60*1000));
-    if (!(num_visits = GetCookie("num_visits")))
-    num_visits = 0;
-    num_visits++;
-    SetCookie("num_visits",num_visits,expdate);
-    document.write("yaya這是你第 "+num_visits+" 次到訪本站了唷^_____^");
-    // --></script></div>
-    
-   
-    
-  </body>
-  
- </html>
+	
+.products_box {
+	margin: 10px 6px;
+	padding: 0;
+	width: 78px;
+	float:left;
+	}
+
+	
+
+	
+
+/* 以下是底腳區css*/
+#footer {
+background-color:#FFD52b;clear:both;text-align:center;
+font-size:11px;/*不是主要重點就調小文字*/
+}
+
+/* 以下是menu選單區css*/
+#nav {
+margin:0;
+padding:0;
+list-style-type:none;
+width:180px;
+}
+
+#nav li a { 
+text-decoration: none;
+display:block;/*設定為區塊*/
+padding:3px 6px;
+border-bottom: 1px solid #632d00;
+}
+
+#nav li a.active, #nav li a:hover {
+background:#eee;/*滑鼠滑入處變色*/
+color:#333;
+}
+</style>
+
+<div id="container" >
+<!-- ▼以下DIV區是主圖banner區▼ -->
+<div id="header">
+<div id='logo'><img class='' src="img/as_logo.gif" alt="logo" width="" height=""> </div> <h1 >歡迎光臨天然世界網站</h1>
+</div>
+<!-- ▼以下DIV區是選單區▼ -->
+<div id="menu" >
+<ul id="nav">
+<li><a href="#">首頁</a></li>
+<li><a href="#">店鋪簡介</a></li>
+<li><a href="#">最新消息</a></li>
+<li><a href="#">商品區</a></li>
+<li><a href="#">連絡我</a></li>
+</ul>
+</div>
+
+<div id="content">
+<!-- ▼以下是最新訊息網頁連結區▼ -->
+<div id="left2">
+<div class="news_title">
+<h2>News</h2>
+</div>
+<div id="news">
+<!-- // ▼以下是最新訊息區▼ -->
+<dl>
+<dt>2013.5.21</dt>
+<dd><a href="#1">稻米成熟中</a></dd>
+<div class="clear_both"></div>
+</dl>
+
+<!-- //  -->
+<dl>
+<dt>2013.4.05</dt>
+<dd><a href="news.html#02">西瓜現採開賣</a></dd>
+<div class="clear_both"></div>
+</dl>
+
+<!-- //  -->
+<dl class="dl_bottom">
+<dt>2013.3.28</dt>
+<dd><a href="#">蕃茄上市</a></dd>
+<div class="clear_both"></div>
+</dl>
+<!-- // ▲以上是最新訊息區▲ -->
+</div>
+<div class="more_link">>> <a href="#">更多訊息</a></div>
+</div>
+<!-- ▲以上是最新訊息more連結區▲ -->
+
+<!-- ▼以下是商品網頁連結區▼ -->
+<div id="right2">
+<div class="products_title"><h2>商品區</h2></div>
+
+<div id="products">
+<div class="products_box">
+<a href="#"><img src="img/p1.jpg" alt="p1" border="1" width="70px" height="55px" /></a>
+<p><a href="#">葉牡丹</a></p>
+</div>
+<div class="products_box">
+<a href="#"><img src="img/p2.jpg" alt="p1" border="1" width="70px" height="55px" /></a>
+<p><a href="#">茶花</a></p>
+</div>
+</div></div>
+<!-- ▲以上是商品區▲ -->
+
+</div>
+<!-- ▲以上內容商end▲ -->
+<div id="footer">
+版權所有 © 天然世界</div>
+
+</div>
+
+</body>
+</html>
