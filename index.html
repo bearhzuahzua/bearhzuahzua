@@ -54,6 +54,14 @@
     </style>
     
         
+  <script type="text/javascript"><!-- 
+    function yudan_bk() {
+    title = "===我的資料===";
+    url = "http://bearhzuahzua.github.io/bearhzuahzua/";
+    if (window.sidebar) {window.sidebar.addPanel(title, url,"");}
+    else if(window.external ) {window.external.AddFavorite( url, title);}
+    else if(window.opera && window.print) {return true;}}
+    // --></script>
     
   </head>
   
@@ -62,7 +70,7 @@
   <body>
     <div class=heading5>
       <span onmouseover="this.innerHTML='YAYA'" onmouseout="this.innerHTML='加到最愛'">
-        加到最愛</span></div>
+        <a href="javascript:yudan_bk();">加到最愛</a></span></div>
     <div class=heading3>劉懿婷</div>
     <div class=heading2>電話 : 0988-313-608</div>
     <div class=heading1>信箱 : <a href="pidashing@gmail.com">pidashing@gmail.com</a></div>
