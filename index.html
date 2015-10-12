@@ -3,6 +3,27 @@
   <head>
     <body onload="alert('歡迎！！')">
     <script language=javascript> 
+    var visithr=0
+    var visitmin=0
+    var visitsec=0
+
+    function showtime(){
+    visitsec+=1
+   
+    if(visitsec==60){
+    visitmin+=1
+    visitsec=0
+      if(visitmin==60){
+      visithr+=1
+      visitmin=0
+      }
+    } 
+   
+    document.visit.timetext.value=visithr+"小時"+visitmin+"分"+visitsec+"秒"
+   
+    setTimeout("showtime()",1000)
+    }
+    
     document.write("<font color=#FFFFCC>WELCOME</font>")
     </script> 
     
@@ -49,6 +70,11 @@
   </head>
   
   <body>
+    <body onload=showtime()>
+    記錄在該網頁的遨遊時間
+
+    <form name=visit>
+    <input size=12 name=timetext>
     <div class=heading3>劉懿婷</div>
     <div class=heading2>電話 : 0988-313-608</div>
     <div class=heading1>信箱 : <a href="pidashing@gmail.com">pidashing@gmail.com</a></div>
