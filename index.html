@@ -67,92 +67,17 @@
     
   </head>
   
-  <body onLoad="DisplayMsg()" onUnload="quitDisplay()" background="jpg/01_bkg1.jpg">
-  <SCRIPT LANGUAGE = "JavaScript">
-  var outMsg = "";
-  var i = 0;
-  var lineNo = 1;
-  var timerDM=null;
-  var msg = " ";
-  function araVob() {
-  }
-  var ScreenLine = new araVob();
-  ScreenLine[1] = "歡迎光臨動力資訊網"
-  ScreenLine[2] = "本站提供您完整網頁教學內容"
-  ScreenLine[3] = "希望您會喜歡";
-  ScreenLine[4] = "Java applets 教學";
-  ScreenLine[5] = "Java script 教學";
-  ScreenLine[6] = " ";
-  ScreenLine[7] = "ASP 軟體下載"
-  ScreenLine[8] = "CGI 軟體下載";
-  ScreenLine[9] = " ";
-var msgNum = 1; // set to first message to display
-var msgCnt = 9; // set to number of last message "page" to display.
-var typeSpeed = 70; // the typing rate, in milliseconds. (Higher number is slower)
-var pageLen = 3; // set to page size, usually number of ROWS in TEXTAREA
-var delay=typeSpeed;
-var r = 0;
-var cr="\r\n"
-if ("3" <=navigator.appVersion.charAt(0)) {
-var cr="\n"
-}
-for (x = 1; x<=(msgCnt); x++) {
-ScreenLine[x] = ScreenLine[x] + cr;
-}
-msg = ScreenLine[1];
 
-function DisplayMsg() {
-if (msg.length <= i || msg.charAt(i) == "\f") {
-r=i;
-i=0;
-ChangeMsg();
-}
-outMsg = outMsg + msg.charAt(i);
-i++; 
-if (msg.charAt(i) == "\f" || (lineNo == pageLen && i==msg.length)) {
-delay = 4000; }
-else {
-if (msg.charAt(i) == cr && msg != " "+cr) {
-delay = 2000; }
-else {
-delay = typeSpeed; } 
-}
-self.document.forms[0].elements[0].value=outMsg;
-timerDM = setTimeout("DisplayMsg()",delay);
-}
-
-function ChangeMsg() {
-msgNum++;
-if (msgCnt < msgNum) {
-msgNum = 1;
-}
-lineNo++;
-if (pageLen < lineNo || msg.charAt(r) == "\f") {
-outMsg=ScreenLine[msgNum].charAt(i);
-i++;
-lineNo = 1;
-}
-msg = ScreenLine[msgNum];
-}
-
-function quitDisplay() {
-self.document.forms[0].elements[0].value = "Type yourself a Note today!";
-}
-// -->
-</SCRIPT>
-<center>
-<FORM NAME= "msgform" ACTION=" "> 
-<TEXTAREA NAME="msgarea" COLS=40 ROWS=3> 
-JavaScript (or JScript) Power needed. 
-</TEXTAREA> 
-
-</FORM>
-</body>
   
   <body>
-    <div style="width:1200px;height:40px;"></div>
+    <div style="width:1200px;height:40px;"><marquee style=font-family:"微軟正黑體"; 
+    font-size: 12pt; color: #444444; letter-spacing: 2pt; text-align: center; word-spacing: 0;
+    align="middle" width="400" height="27">
+    哈囉!!您好!!</marquee></div>
     <div style="width:100%;height:10px;background-color:#444444"></div>
     <div style="width:1200px;height:40px;"></div>
+    
+    
 <div class="wrapper">
   <div class="center">
     <div class="heading3"><span onmouseover="this.innerHTML='熊抓抓'" onmouseout="this.innerHTML='劉懿婷'">劉懿婷</span></div>
